@@ -1,0 +1,4 @@
+{
+  "cta": "Click me to change language to '{{lang}}'",
+  "variable-example": "Using a variable {{count}}"
+}
