@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import { useRouter } from 'next/router';
 
 const ChangeLanguage = () => {

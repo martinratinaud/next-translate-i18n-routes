@@ -43,6 +43,10 @@ module.exports = (nextConfig) => {
 
   return {
     ...nextTranslateConfig,
+    publicRuntimeConfig: {
+      ...nextTranslateConfig.publicRuntimeConfig,
+      permalinks, // add it to publicRuntimeConfig so it can be used by the Link component
+    },
     async rewrites() {
       const existingRewrites = nextTranslateConfig.rewrites
         ? await nextTranslateConfig.rewrites()
