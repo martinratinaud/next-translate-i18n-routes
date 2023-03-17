@@ -1,5 +1,10 @@
 import { LanguageSwitcher, useTranslation } from 'modules/I18n';
 
+export const permalinks: { [key: string]: string } = {
+  en: '/',
+  fr: '/accueil',
+};
+
 const HomePage = () => {
   const { t } = useTranslation();
 

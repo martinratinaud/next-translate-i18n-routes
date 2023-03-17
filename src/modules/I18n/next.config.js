@@ -1,6 +1,6 @@
 const nextTranslate = require('next-translate-plugin');
 const fs = require('fs');
-const permalinks = require('./permalinks.json');
+const { getPagePermalinks } = require('./utils');
 
 /**
  * 
@@ -40,7 +40,7 @@ const permalinksToRewriteRules = (permalinks) =>
 
 module.exports = (nextConfig) => {
   const nextTranslateConfig = nextTranslate(nextConfig);
-
+  const permalinks = getPagePermalinks();
   return {
     ...nextTranslateConfig,
     publicRuntimeConfig: {
